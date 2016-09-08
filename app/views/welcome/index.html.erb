@@ -21,10 +21,10 @@
                         <a class="page-scroll" href="/present_comunity">Comunidades</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">Servicios</a>
+                        <a class="page-scroll" href="/services">Servicios</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#about">Eventos</a>
+                        <a class="page-scroll" href="/events">Eventos</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="/topics">Foros</a>
@@ -37,6 +37,10 @@
                      <li>
                         <a class="page-scroll" href="/users/sign_in">Login</a>
                     </li>
+                    <%else%>
+                        <li>
+                        <a class="page-scroll" href="/users/sign_out", data-method="delete">Salir</a>
+                        </li>
                     <%end%>
                 </ul>
             </div>
