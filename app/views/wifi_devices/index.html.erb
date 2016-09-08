@@ -1,29 +1,31 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Wifi Devices</h1>
+<div class='box box-solid'>
+  <div class='box-body'>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Park</th>
+          <th>Alerted</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
 
-<table>
-  <thead>
-    <tr>
-      <th>Park</th>
-      <th>Alerted</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @wifi_devices.each do |wifi_device| %>
-      <tr>
-        <td><%= wifi_device.park_id %></td>
-        <td><%= wifi_device.alerted %></td>
-        <td><%= link_to 'Show', wifi_device %></td>
-        <td><%= link_to 'Edit', edit_wifi_device_path(wifi_device) %></td>
-        <td><%= link_to 'Destroy', wifi_device, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+      <tbody>
+        <% @wifi_devices.each do |wifi_device| %>
+          <tr>
+            <td><%= wifi_device.park_id %></td>
+            <td><%= wifi_device.alerted %></td>
+            <td><%= link_to 'Show', wifi_device %></td>
+            <td><%= link_to 'Edit', edit_wifi_device_path(wifi_device) %></td>
+            <td><%= link_to 'Destroy', wifi_device, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+</div>
+</div>
 <br>
 
 <%= link_to 'New Wifi device', new_wifi_device_path %>
