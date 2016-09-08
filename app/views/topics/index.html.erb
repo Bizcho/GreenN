@@ -1,13 +1,20 @@
 <% content_for :page_title, 'Topics' %>
 
-<% @topics.each do |topic| %>
-  <div class="row">
-    <div class="col-sm-12 col-md-10 col-sm-8">
-      <div class="box box-success box-solid">
-        <div class="box-header with-border"> <%= link_to topic.name, topic_path(topic) %></div>
-        <div class="box-body"> <%= topic.description %></div>
+<div class='box box-solid'>
+  <div class='box-body'>
+    <%= link_to '<i class="fa fa-plus"></i> add topic'.html_safe, new_topic_path, class: 'btn btn-app' %>
+    <hr>
+
+    <% @topics.each do |topic| %>
+      <div class="row">
+        <div class="col-sm-12 col-md-10 col-md-offset-1 col-sm-8">
+          <div class="box box-success box-solid">
+            <div class="box-header with-border"> <%= link_to topic.name, topic_path(topic) %></div>
+            <div class="box-body"> <%= topic.description %></div>
+          </div>
+        </div>
       </div>
-    </div>
+    <%end%>
   </div>
-<%end%>
+</div>
   
