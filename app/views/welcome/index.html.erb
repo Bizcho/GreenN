@@ -30,12 +30,14 @@
                         <a class="page-scroll" href="#team">Foros</a>
                     </li>
                     
+                    <%if !user_signed_in?%>
                     <li>
-                        <a class="page-scroll" href="#registrate">Registrate</a>
+                        <a class="page-scroll" href="/users/sign_up">Registrate</a>
                     </li>
                      <li>
-                        <a class="page-scroll" href="#login">Login</a>
+                        <a class="page-scroll" href="/users/sign_in">Login</a>
                     </li>
+                    <%end%>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
