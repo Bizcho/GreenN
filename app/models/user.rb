@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
   # Markable setup
   acts_as_marker
   has_many :comments
+  has_many :topics
+  has_many :communities
   # Including Gravtastic
   include Gravtastic
   gravtastic

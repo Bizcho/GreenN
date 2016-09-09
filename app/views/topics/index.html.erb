@@ -9,7 +9,7 @@
       <div class="row">
         <div class="col-sm-12 col-md-10 col-md-offset-1 col-sm-8">
           <div class="box box-success box-solid">
-            <div class="box-header with-border"> <%= link_to topic.name, topic_path(topic) %></div>
+            <div class="box-header with-border "> <strong><span class="hidden-xs"><%= topic.user.email.split("@").first + "'s" %></span> </strong>  <%= link_to topic.name, topic_path(topic) %></div>
             <div class="box-body"> <%= topic.description %></div>
           </div>
         </div>
